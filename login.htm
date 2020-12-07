@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>LBCC Library Login</title>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light border-bottom border-dark">
+        <img src="/public/lbcc-logo.png" style="max-width: 80%;" alt="">
+    </nav>
+
+    <div class="container">
+        <h1 class="mt-3">Please login to use this library resource</h1>
+        <div class="row">
+            <div class="col-xs-10 col-lg-6 col-xl-4 mt-5">
+                <div class="card">
+                    <h2 class="card-header text-white" style="background-color: #873D5A;">Option 1</h2>
+                    <div class="card-body">
+                        <a href="/login?auth=shibboleth&url=^U" class="btn text-white"
+                            style="background-color: #005B94;">Login with Single Sign
+                            On/MyLB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-10 col-lg-6 col-xl-4 mt-5">
+                <div class="card">
+                    <h2 class="card-header text-white" style="background-color: #45A169;">Option 2</h2>
+                    <div class="card-body">
+                        <h3 class="card-title">Use your library account</h3>
+                        <form action="/login" method="post">
+                            <input type="hidden" name="url" value="^U" />
+                            <label for="user" class="form-label"> Your X
+                                number (or OSU student ID number)</label>
+                            <input type="text" name="user" id="user" class="form-control"
+                                onkeypress="javascript:{this.value=this.value.toUpperCase();}"><br />
+                            <label for="pass" class="form-label"> Your birth year
+                                (YYYY)</label>
+                            <input type="password" name="pass" id="pass" class="form-control"><br />
+                            <br />
+                            <input type="submit" class="btn text-white" style="background-color: #005B94;"
+                                value="Login" />
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-xs-10 col-lg-6 col-xl-4 mt-5">
+                <div class="card">
+                    <h2 class="card-header text-white" style="background-color: #005B94;">Need help?</h2>
+                    <div class="card-body">
+                        <h3>Call us</h3>
+                        <a href="tel:5419174645" class="btn text-black" style="background-color: #FDB913;"><span
+                                class="material-icons">call</span> (541) 917 4645</a>
+                        <h3 class="mt-3">Email us</h3>
+                        <a href="mailto:libref@linnbenton.edu" class="btn text-black"
+                            style="background-color: #27AAE1;"><span class="material-icons">email</span>
+                            libref@linnbenton.edu</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
